@@ -102,8 +102,9 @@ body {
     grid-template-columns: 1fr 1fr;
     background-color: var(--dark-desaturated-blue);
     max-width: 750px;
-    border-radius: 5px;
+    border-radius: 1rem;
     overflow: auto;
+    margin: 1rem;
 }
 
 .left {
@@ -127,6 +128,7 @@ body {
     font-size: 10px;
     color: var(--transparent-white-main);
     width: 80%;
+    line-height: 2;
 }
 
 .stats {
@@ -153,5 +155,36 @@ body {
     left: 0;
     right: 0;
     bottom: 0; /* These ensure the pseudo-element covers the entire container */
-    background-color: hsla(277, 86%, 34%, 0.5); /* The desired overlay color */
+    background-color: rgba(170, 92, 219, 0.5); /* The desired overlay color */
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: larger;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 350px;
+    }
+
+    .left {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .title {
+        padding-top: 2rem;
+    }
+
+    .info {
+        font-size: small;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding-bottom: 1rem;
+        font-size: larger;
+    }
 }
